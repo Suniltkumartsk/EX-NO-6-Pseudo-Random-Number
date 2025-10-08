@@ -11,7 +11,33 @@ Pass the value for number of iterations and print the numbers.
 End the program.
 
 # PROGRAM:
-
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+//Program developed by SUNIL KUMAR T (212223240164)
+int main()
+{
+  int count, min, max;
+  printf("Enter the number of random numbers to generate: ");
+  scanf("%d", &count);
+  printf("Enter the minimum value: ");
+  scanf("%d", &min);
+  printf("Enter the maximum value: ");
+  scanf("%d", &max);
+  srand(time(NULL));
+  printf("Pseudorandom numbers:\n");
+  for (int i = 0; i < count; i++)
+  {
+  int random_number = (rand() % (max - min + 1)) + min;
+  printf("%d\n", random_number);
+  }
+  return 0;
+}
+```
 # OUTPUT:
+<img width="1636" height="839" alt="image" src="https://github.com/user-attachments/assets/17278e78-22e4-4f7f-90fb-50557f43f75c" />
+
 
 # RESULT:
+Thus, we have successfully implemented pseudo-random number generation using the standard library in C.
